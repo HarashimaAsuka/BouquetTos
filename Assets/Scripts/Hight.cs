@@ -7,6 +7,8 @@ public class Hight : MonoBehaviour
     public float Score => maxY;
 
     [SerializeField] private Text scoreText;
+
+    [SerializeField] private Text numText;
     // [SerializeField] private HeightScore heightScore;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,5 +31,6 @@ public class Hight : MonoBehaviour
         }
 
         scoreText.text = "高度:" + maxY.ToString("F1").TrimEnd('0').TrimEnd('.');
+        numText.text = "高度:" + maxY.ToString("F1").TrimEnd('0').TrimEnd('.');
     }
 }
