@@ -7,6 +7,7 @@ public class GameClear : MonoBehaviour
     public GameObject floor;
 
     [SerializeField] private GameObject ClearCanvas;
+    [SerializeField] private GameObject canvas;
     [SerializeField] private Text clearText;
     [SerializeField] private Text numText;
 
@@ -31,12 +32,14 @@ public class GameClear : MonoBehaviour
         Debug.Log("Top に当たった！");
             ClearCanvas.SetActive(true);
             clearText.enabled = true;
+            canvas.SetActive(false);
         }
         else if (collision.gameObject == floor)
         {
         Debug.Log("Floor に当たった！");
             ClearCanvas.SetActive(true);
             numText.enabled = true;
+            canvas.SetActive(false);
         }
     }
 }
